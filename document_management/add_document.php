@@ -23,6 +23,9 @@
 	if(isset($_GET['vehicle_id'])){
 		$form['vehicle_id'] = $_GET['vehicle_id'];
 	}
+	if(isset($_GET['type']) && in_array($_GET['type'], $document_types)){
+		$form['document_type'] = $_GET['type'];
+	}
 	if(isset($_GET['operator_id'])){
 		$form['holder_type'] = "Operator";
 		$form['document_type'] = "Franchise (CPC)";

@@ -60,9 +60,8 @@
 						<dt>Remarks</dt>
 						<dd><?php if($row['remarks'] != ""){ echo htmlspecialchars($row['remarks']); } else { echo '<span class="muted">None</span>'; } ?></dd>
 					</dl>
-					<div class="form-buttons" style="margin-top:18px;">
+					<div class="form-buttons form-buttons-single" style="margin-top:18px;">
 						<a class="btn" href="edit_document.php?id=<?php echo (int)$row['id']; ?>">Edit</a>
-						<a class="btn btn-light" href="manage_documents.php">Close</a>
 					</div>
 				</div>
 			</div>
@@ -123,7 +122,7 @@
 				</div>
 			</div>
 
-			<div class="panel">
+			<div class="panel" id="renew">
 				<div class="panel-head">Renew Document</div>
 				<div class="panel-body">
 					<form method="post" action="renew_document.php">

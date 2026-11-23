@@ -142,11 +142,11 @@
 					<td><?php $badge_status = $row['verification_status']; include "../badges/verification.php"; ?></td>
 					<td>
 						<div class="actions">
-							<a class="icon-btn" title="View, verify or renew" href="view_document.php?id=<?php echo (int)$row['id']; ?>"><?php echo $icon_view; ?></a>
-							<a class="icon-btn" title="Edit" href="edit_document.php?id=<?php echo (int)$row['id']; ?>"><?php echo $icon_edit; ?></a>
+							<a class="btn btn-light btn-small" href="view_document.php?id=<?php echo (int)$row['id']; ?>">View</a>
+							<a class="btn btn-light btn-small" href="edit_document.php?id=<?php echo (int)$row['id']; ?>">Edit</a>
 							<form method="post" action="delete_document.php" onsubmit="return confirm('Delete this document and its renewal history?');">
 								<input type="hidden" name="id" value="<?php echo (int)$row['id']; ?>">
-								<button class="icon-btn danger" title="Delete" name="delete"><?php echo $icon_delete; ?></button>
+								<button class="btn btn-light btn-small btn-end" name="delete">Delete</button>
 							</form>
 						</div>
 					</td>
